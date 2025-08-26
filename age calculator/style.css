@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 50%, #FFD700 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #FF8E53;
+}
+
+button {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 50%, #FFD700 100%);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 99, 99, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result.show {
+    display: block;
+    animation: fadeIn 0.5s
+}
+
+.reuslt h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.age-result {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.age-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.081);
+    flex: 1;
+    margin: 0 10px;
+}
+
+.age-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FF8E53;
+    margin-bottom: 5px;
+}
+
+.age-label {
+    font-size: 14px;
+    color: #666;
+}
+
+.error.show {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .age-result {
+        flex-direction: column;
+    }
+
+    .age-box {
+        margin: 10px 0;
+    }
+}
