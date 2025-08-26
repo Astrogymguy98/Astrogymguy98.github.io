@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-weight-scale"></i>My BMI Calculator</h1>
+            <p>Calculate your Body Mass Index and get personalized health information </p>
+        </div>
+
+        <div class="content">
+            <div class="input-section">
+                <div class="units">
+                    <div class="unit-btn active" id="metric-btn">Metric (kg/cm)</div>
+                    <div class="unit-btn" id="imperial-btn">Imperial (lbs/in)</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Height</label>
+                    <input type="number" id="height" placeholder="Enter height" min="1">
+
+                    <div id="height-unit">cm</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="height">Weight</label>
+                    <input type="number" id="weight" placeholder="Enter weight" min="1">
+
+                    <div id="weight-unit">kg</div>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" placeholder="Enter age" min="1" max="120">
+                </div>
+
+                <div class="input-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <button id="calculate-btn">Calculate BMI</button>
+                <div class="error" id="error-message">Please enter valid values for all fields</div>
+            </div>
+
+            <div class="result-section">
+                <div class="bmi-value" id="bmi-value">00.0</div>
+                <div class="bmi-category" id="bmi-category">Enter values</div>
+
+                <div class="bmi-scale">
+                    <div class="bmi-indicator" id="bmi-indicator" style="left: 0%;"></div>
+                </div>
+
+                <div class="bmi-labels">
+                            <span>Underweight (≤18.4)</span>
+                            <span>Normal (18.5-24.9)</span>
+                            <span>Overweight (25-29.9)</span>
+                            <span>Obese (≥30)</span>
+                </div>
+
+                <div class="health-tips">
+                    <h3><i class="fas fa-heart"></i> Health Tips</h3>
+
+                    <div class="tip">
+                        <div class="tip-icon"><i class="fas fa-apple-alt"></i></div>
+                        <div>Eat a balanced diet with plenty of fruits and vegetables</div>
+                    </div>
+
+                    <div class="tip">
+                        <div class="tip-icon"><i class="fas fa-running"></i></div>
+                        <div>Exercise for at least 30 minutes most days of the week</div>
+                    </div>
+
+                    <div class="tip">
+                        <div class="tip-icon"><i class="fas fa-glass-whiskey"></i></div>
+                        <div>Drink plenty of water and limit sugary beverages</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="script.js"></script>
+</body>
+
+</html>
